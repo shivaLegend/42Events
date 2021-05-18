@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import CardSlider
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        initUI()
     }
-
+    
+    
+    //MARK: - UI functions
+    func initUI() {
+        title = "Home"
+    }
+    //MARK: - Handler functions
+    
+    //MARK: - API functions
 
 }
 

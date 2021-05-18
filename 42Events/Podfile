@@ -6,5 +6,6 @@ target '42Events' do
   use_frameworks!
 
   # Pods for 42Events
+pod 'CardSlider'
 
 end
