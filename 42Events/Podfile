@@ -6,6 +6,7 @@ target '42Events' do
   use_frameworks!
 
   # Pods for 42Events
-pod 'CardSlider'
-
+pod 'FSPagerView'
+pod 'Moya', '~> 14.0'
+pod 'SwiftyJSON', '~> 4.0'
 end
