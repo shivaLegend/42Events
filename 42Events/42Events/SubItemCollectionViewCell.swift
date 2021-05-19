@@ -12,9 +12,9 @@ class SubItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        roundCornersWith(radius: 10)
+        roundCornersWith(radius: 15)
         layer.borderWidth = 1
-        layer.borderColor = UIColor.systemGray.cgColor
+        layer.borderColor = UIColor.systemGray4.cgColor
     }
     func setData(title: String) {
         titleLbl.text = title

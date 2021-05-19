@@ -7,6 +7,7 @@
 
 import UIKit
 import FSPagerView
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var pagerView: FSPagerView!
@@ -111,6 +112,22 @@ class HomeViewController: UIViewController {
 //MARK: -UICollectionViewDataSource, UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView {
+        case eventsCollectionView:
+            return listEvent.count
+        case startingSoonCollectionView:
+            return data?.startingSoon.count ?? 3
+        case popularCollectionView:
+            return data?.popular.count ?? 3
+        case newReleaseCollectionView:
+            return data?.newRelease.count ?? 3
+        case freeCollectionView:
+            return data?.free.count ?? 3
+        case pastRacesCollectionView:
+            return data?.past.count ?? 3
+        default:
+            break
+        }
         return listEventColor.count
     }
     

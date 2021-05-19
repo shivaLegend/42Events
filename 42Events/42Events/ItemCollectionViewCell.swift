@@ -6,27 +6,7 @@
 //
 
 import UIKit
-class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
-
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        let attributes = super.layoutAttributesForElements(in: rect)
-
-        var leftMargin = sectionInset.left
-        var maxY: CGFloat = -1.0
-        attributes?.forEach { layoutAttribute in
-            if layoutAttribute.frame.origin.y >= maxY {
-                leftMargin = sectionInset.left
-            }
-
-            layoutAttribute.frame.origin.x = leftMargin
-
-            leftMargin += layoutAttribute.frame.width + minimumInteritemSpacing
-            maxY = max(layoutAttribute.frame.maxY , maxY)
-        }
-
-        return attributes
-    }
-}
+import SDWebImage
 class ItemCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -54,9 +34,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     func setData(image: String, title: String, subTitle: String) {
         titleLbl.text = title
         subTitleLbl.text = subTitle
-        guard let url = URL(string: image) else { return }
-        let data = try? Data(contentsOf: url)
-        imgView.image = UIImage(data: data ?? Data())
+        imgView.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "placeholder.png"))
     }
 }
 extension ItemCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

@@ -13,6 +13,7 @@
 		220746FE26527BF4004C6B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220746FD26527BF4004C6B07 /* Assets.xcassets */; };
 		2207470126527BF4004C6B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220746FF26527BF4004C6B07 /* LaunchScreen.storyboard */; };
 		227F209E2654BE18005233DF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F209D2654BE18005233DF /* Item.swift */; };
+		227F20A92654CB95005233DF /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F20A82654CB95005233DF /* CollectionViewFlowLayout.swift */; };
 		229FEF80265367C80089BACC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FEF7F265367C80089BACC /* NetworkManager.swift */; };
 		229FEF83265368C10089BACC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FEF82265368C10089BACC /* Reachability.swift */; };
 		229FEF86265368DE0089BACC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FEF85265368DE0089BACC /* DataManager.swift */; };
@@ -41,6 +42,7 @@
 		2207470226527BF4004C6B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		225631AB7EF3AFA1A0E22110 /* Pods-42Events.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42Events.debug.xcconfig"; path = "Target Support Files/Pods-42Events/Pods-42Events.debug.xcconfig"; sourceTree = "<group>"; };
 		227F209D2654BE18005233DF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		227F20A82654CB95005233DF /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		229FEF7F265367C80089BACC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		229FEF82265368C10089BACC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		229FEF85265368DE0089BACC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -93,16 +95,13 @@
 		220746F326527BF2004C6B07 /* 42Events */ = {
 			isa = PBXGroup;
 			children = (
-				229FF00326539E410089BACC /* img1.jpeg */,
-				229FF00426539E420089BACC /* img2.jpeg */,
-				229FF00226539E410089BACC /* img3.jpeg */,
-				229FF00526539E420089BACC /* img4.jpeg */,
 				2207470D26527CC1004C6B07 /* Storyboards */,
 				2207470B26527C7E004C6B07 /* Models */,
 				2207470A26527C75004C6B07 /* Views */,
 				2207470C26527C8D004C6B07 /* Controllers */,
 				2207470E26527D0E004C6B07 /* Network */,
 				229FEF88265369260089BACC /* Helpers */,
+				227F20AB2654DB3F005233DF /* Resources */,
 				220746F426527BF2004C6B07 /* AppDelegate.swift */,
 				220746FD26527BF4004C6B07 /* Assets.xcassets */,
 				2207470226527BF4004C6B07 /* Info.plist */,
@@ -153,11 +152,23 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		227F20AB2654DB3F005233DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				229FF00326539E410089BACC /* img1.jpeg */,
+				229FF00426539E420089BACC /* img2.jpeg */,
+				229FF00226539E410089BACC /* img3.jpeg */,
+				229FF00526539E420089BACC /* img4.jpeg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		229FEF88265369260089BACC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				229FEF89265369360089BACC /* AlertBuilder.swift */,
 				229FEF8C265378FE0089BACC /* Extensions.swift */,
+				227F20A82654CB95005233DF /* CollectionViewFlowLayout.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -319,6 +330,7 @@
 				229FEF80265367C80089BACC /* NetworkManager.swift in Sources */,
 				229FF0122653A77D0089BACC /* ItemCollectionViewCell.swift in Sources */,
 				229FEF86265368DE0089BACC /* DataManager.swift in Sources */,
+				227F20A92654CB95005233DF /* CollectionViewFlowLayout.swift in Sources */,
 				227F209E2654BE18005233DF /* Item.swift in Sources */,
 				220746F926527BF2004C6B07 /* HomeViewController.swift in Sources */,
 				229FEF83265368C10089BACC /* Reachability.swift in Sources */,

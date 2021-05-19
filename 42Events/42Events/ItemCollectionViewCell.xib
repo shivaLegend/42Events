@@ -17,26 +17,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="396" height="303"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="hLW-3e-ug6">
-                        <rect key="frame" x="0.0" y="0.0" width="396" height="150"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="hLW-3e-ug6">
+                        <rect key="frame" x="0.0" y="0.0" width="396" height="160"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="150" id="2pZ-BE-sAe"/>
+                            <constraint firstAttribute="height" constant="160" id="2pZ-BE-sAe"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Race The Globe - tatatatatatatatatatatatatatatatatatata" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnN-IL-MuV">
-                        <rect key="frame" x="0.0" y="160" width="376" height="41"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race The Globe - tatatatatatatatatatatatatatatatatatata" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnN-IL-MuV">
+                        <rect key="frame" x="0.0" y="170" width="396" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGE-5n-QOg">
-                        <rect key="frame" x="0.0" y="209" width="376" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGE-5n-QOg">
+                        <rect key="frame" x="0.0" y="196" width="376" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-tl-9C0">
-                        <rect key="frame" x="0.0" y="233" width="396" height="50"/>
+                        <rect key="frame" x="0.0" y="222" width="396" height="50"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="Uyn-1e-MwL"/>
@@ -55,7 +54,7 @@
                 <constraint firstItem="tnN-IL-MuV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9HJ-St-3pm"/>
                 <constraint firstAttribute="trailing" secondItem="hLW-3e-ug6" secondAttribute="trailing" id="B9H-HK-ZOR"/>
                 <constraint firstItem="hLW-3e-ug6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BbT-Si-8lO"/>
-                <constraint firstAttribute="trailing" secondItem="tnN-IL-MuV" secondAttribute="trailing" constant="20" id="DC1-s0-vAW"/>
+                <constraint firstAttribute="trailing" secondItem="tnN-IL-MuV" secondAttribute="trailing" id="DC1-s0-vAW"/>
                 <constraint firstAttribute="trailing" secondItem="CGE-5n-QOg" secondAttribute="trailing" constant="20" id="Jtv-VC-6YB"/>
                 <constraint firstAttribute="trailing" secondItem="FMK-tl-9C0" secondAttribute="trailing" id="L9y-V4-LCY"/>
                 <constraint firstItem="tnN-IL-MuV" firstAttribute="top" secondItem="hLW-3e-ug6" secondAttribute="bottom" constant="10" id="Sj1-La-UJz"/>
@@ -64,7 +63,6 @@
                 <constraint firstItem="CGE-5n-QOg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="U2e-km-L3v"/>
                 <constraint firstItem="FMK-tl-9C0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YFP-hc-uui"/>
                 <constraint firstItem="CGE-5n-QOg" firstAttribute="top" secondItem="tnN-IL-MuV" secondAttribute="bottom" constant="8" id="l7N-5F-Xia"/>
-                <constraint firstAttribute="bottom" secondItem="FMK-tl-9C0" secondAttribute="bottom" constant="20" id="maA-zB-cc1"/>
             </constraints>
             <size key="customSize" width="327" height="303"/>
             <connections>
@@ -78,7 +76,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="img1.jpeg" width="1400" height="737"/>
+        <image name="placeholder" width="600" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
