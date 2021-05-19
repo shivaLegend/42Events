@@ -31,10 +31,16 @@ class ItemCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var subTitleLbl: UILabel!
     var listSubItem = ["Running","joinded","Single submission","Multiple submission"]
     override func awakeFromNib() {
         super.awakeFromNib()
         roundCornersWith(radius: 10)
+        initCollectionView()
+    }
+    func initCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "SubItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SubItemCollectionViewCell")
@@ -45,7 +51,13 @@ class ItemCollectionViewCell: UICollectionViewCell {
         let temp = LeftAlignedCollectionViewFlowLayout()
         collectionView.collectionViewLayout = temp
     }
-
+    func setData(image: String, title: String, subTitle: String) {
+        titleLbl.text = title
+        subTitleLbl.text = subTitle
+        guard let url = URL(string: image) else { return }
+        let data = try? Data(contentsOf: url)
+        imgView.image = UIImage(data: data ?? Data())
+    }
 }
 extension ItemCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

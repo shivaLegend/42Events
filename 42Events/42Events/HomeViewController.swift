@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var pageControlView: FSPageControl!
     @IBOutlet weak var eventsCollectionView: UICollectionView!
     @IBOutlet weak var startingSoonCollectionView: UICollectionView!
+    @IBOutlet weak var popularCollectionView: UICollectionView!
+    @IBOutlet weak var newReleaseCollectionView: UICollectionView!
+    @IBOutlet weak var freeCollectionView: UICollectionView!
+    @IBOutlet weak var pastRacesCollectionView: UICollectionView!
     
     private let listImage = [UIImage(named: "img1.jpeg"),
                              UIImage(named: "img2.jpeg"),
@@ -22,6 +26,8 @@ class HomeViewController: UIViewController {
     private let listEventColor = [UIColor(red: 0/255, green: 192/255, blue: 174/255, alpha: 1.0),
                                   UIColor(red: 20/255, green: 188/255, blue: 239/255, alpha: 1.0),
                                   UIColor(red: 249/255, green: 115/255, blue: 79/255, alpha: 1.0)]
+    private var data: DataItems?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -57,19 +63,46 @@ class HomeViewController: UIViewController {
         eventsCollectionView.delegate = self
         eventsCollectionView.dataSource = self
         eventsCollectionView.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EventCollectionViewCell")
+        
         startingSoonCollectionView.backgroundColor = .clear
         startingSoonCollectionView.delegate = self
         startingSoonCollectionView.dataSource = self
         startingSoonCollectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
+        
+        popularCollectionView.backgroundColor = .clear
+        popularCollectionView.delegate = self
+        popularCollectionView.dataSource = self
+        popularCollectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
+        
+        newReleaseCollectionView.backgroundColor = .clear
+        newReleaseCollectionView.delegate = self
+        newReleaseCollectionView.dataSource = self
+        newReleaseCollectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
+        
+        freeCollectionView.backgroundColor = .clear
+        freeCollectionView.delegate = self
+        freeCollectionView.dataSource = self
+        freeCollectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
+        
+        pastRacesCollectionView.backgroundColor = .clear
+        pastRacesCollectionView.delegate = self
+        pastRacesCollectionView.dataSource = self
+        pastRacesCollectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
         
     }
     //MARK: - Handler functions
     
     //MARK: - API functions
     func callAPIRaceEvents() {
+        Reachability.checkNetwork(vc: self)
         provider.request(.raceEvents) { (result) in
-            if let _  = DataManager.shared.isSuccessData(result: result, vc: self) {
-                
+            if let json = DataManager.shared.isSuccessData(result: result, vc: self) {
+                self.data = DataItems(json: json)
+                self.startingSoonCollectionView.reloadData()
+                self.popularCollectionView.reloadData()
+                self.newReleaseCollectionView.reloadData()
+                self.freeCollectionView.reloadData()
+                self.pastRacesCollectionView.reloadData()
             }
         }
     }
@@ -89,11 +122,31 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
         case startingSoonCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            
+            let temp = data?.startingSoon[indexPath.row]
+            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            return cell
+        case popularCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
+            let temp = data?.popular[indexPath.row]
+            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            return cell
+        case newReleaseCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
+            let temp = data?.newRelease[indexPath.row]
+            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            return cell
+        case freeCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
+            let temp = data?.free[indexPath.row]
+            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            return cell
+        case pastRacesCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
+            let temp = data?.past[indexPath.row]
+            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
             return cell
         default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
-            cell.setData(name: listEvent[indexPath.row], color: listEventColor[indexPath.row])
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
             return cell
         }
         
@@ -105,7 +158,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case startingSoonCollectionView:
             return CGSize(width: collectionView.bounds.width - 10, height: collectionView.bounds.height)
         default:
-            return CGSize(width: (collectionView.bounds.width - 20)/3, height: collectionView.bounds.height)
+            return CGSize(width: collectionView.bounds.width - 10, height: collectionView.bounds.height)
         }
     }
 }

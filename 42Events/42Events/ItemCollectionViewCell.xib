@@ -70,6 +70,9 @@
             <connections>
                 <outlet property="collectionView" destination="FMK-tl-9C0" id="ngd-3E-oix"/>
                 <outlet property="collectionViewHeight" destination="Uyn-1e-MwL" id="Qwc-9d-EBb"/>
+                <outlet property="imgView" destination="hLW-3e-ug6" id="N2W-0y-abP"/>
+                <outlet property="subTitleLbl" destination="CGE-5n-QOg" id="pie-KS-KQv"/>
+                <outlet property="titleLbl" destination="tnN-IL-MuV" id="DLq-gg-Sqv"/>
             </connections>
             <point key="canvasLocation" x="-1.4492753623188408" y="211.27232142857142"/>
         </collectionViewCell>
