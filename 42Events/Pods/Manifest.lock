@@ -8,12 +8,14 @@ PODS:
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
+  - SideMenu (6.5.0)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - FSPagerView
   - Moya (~> 14.0)
   - SDWebImage (~> 5.0)
+  - SideMenu
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - FSPagerView
     - Moya
     - SDWebImage
+    - SideMenu
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -29,8 +32,9 @@ SPEC CHECKSUMS:
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: fd0777ce66a105dfcc05236b6b49b93c3e46844d
+PODFILE CHECKSUM: ca8bbd56fb6159638ff1f5f60d9e13dcd34fb2ba
 
 COCOAPODS: 1.10.1
