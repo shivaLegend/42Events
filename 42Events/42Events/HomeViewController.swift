@@ -150,28 +150,28 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
         case startingSoonCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            let temp = data?.startingSoon[indexPath.row]
-            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            guard let temp = data?.startingSoon[indexPath.row] else {return cell}
+            cell.setData(data: temp)
             return cell
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            let temp = data?.popular[indexPath.row]
-            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            guard let temp = data?.popular[indexPath.row] else {return cell}
+            cell.setData(data: temp)
             return cell
         case newReleaseCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            let temp = data?.newRelease[indexPath.row]
-            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            guard let temp = data?.newRelease[indexPath.row] else {return cell}
+            cell.setData(data: temp)
             return cell
         case freeCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            let temp = data?.free[indexPath.row]
-            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            guard let temp = data?.free[indexPath.row] else {return cell}
+            cell.setData(data: temp)
             return cell
         case pastRacesCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            let temp = data?.past[indexPath.row]
-            cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+            guard let temp = data?.past[indexPath.row] else {return cell}
+            cell.setData(data: temp)
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell

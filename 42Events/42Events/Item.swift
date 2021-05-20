@@ -53,10 +53,27 @@ struct Item {
     let urlImage: String
     let title: String
     let subTitle: String
+    let sportType: String
+    let raceRunners: Int
+    let racePrice: String
+    let eventType: String
+    let tags: [String]
     init(json: JSON) {
         urlImage = json["banner_card"].stringValue
         title = json["race_name"].stringValue
         subTitle = json["racePeriod"].stringValue
+        sportType = json["sportType"].stringValue
+        raceRunners = json["raceRunners"].intValue
+        racePrice = json["racePrice"].stringValue
+        eventType = json["eventType"].stringValue
+        
+        var tempTags: [String] = []
+        tempTags.append(sportType)
+        tempTags.append(String(raceRunners) + "Km")
+        tempTags.append(racePrice)
+        tempTags.append(eventType)
+
+        tags = tempTags
     }
 }
 

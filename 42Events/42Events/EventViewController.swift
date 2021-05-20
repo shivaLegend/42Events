@@ -11,7 +11,7 @@ class EventViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var totalEventsLbl: UILabel!
-    private let heightOfCell: CGFloat = 310
+    private let heightOfCell: CGFloat = 280
     private var data: DetailEvent?
     var typeEvent: TypeEvent = .Cycling
     override func viewDidLoad() {
@@ -63,8 +63,8 @@ extension EventViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-        let temp = self.data?.events[indexPath.row]
-        cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+        guard let temp = data?.events[indexPath.row] else {return cell}
+        cell.setData(data: temp)
         return cell
         
     }
