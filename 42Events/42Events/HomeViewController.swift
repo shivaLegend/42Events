@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
         initCollectionView()
         initPageControl()
         initSideMenu()
+       
     }
     func initSideMenu() {
         SideMenuManager.default.addPanGestureToPresent(toView: navigationController!.navigationBar)
@@ -186,6 +187,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return CGSize(width: collectionView.bounds.width - 10, height: collectionView.bounds.height)
         default:
             return CGSize(width: collectionView.bounds.width - 10, height: collectionView.bounds.height)
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case eventsCollectionView:
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EventViewController") as! EventViewController
+            vc.title = listEvent[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
         }
     }
 }

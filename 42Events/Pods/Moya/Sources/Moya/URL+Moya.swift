@@ -12,6 +12,7 @@ public extension URL {
             self = target.baseURL
         } else {
             self = target.baseURL.appendingPathComponent(targetPath)
+            print(self)
         }
     }
 }

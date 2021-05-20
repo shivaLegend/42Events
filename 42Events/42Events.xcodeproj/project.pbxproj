@@ -32,6 +32,7 @@
 		22BB693F2655FBF000D82A93 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB693E2655FBF000D82A93 /* SideMenuViewController.swift */; };
 		22BB69432655FF5B00D82A93 /* ItemInMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */; };
 		22BB69442655FF5B00D82A93 /* ItemInMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */; };
+		22BB695226560D5200D82A93 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB695126560D5200D82A93 /* EventViewController.swift */; };
 		FA668B736F2ECDC81172C69A /* Pods_42Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A44F5C7DB9BA327F00BB7A9 /* Pods_42Events.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		22BB693E2655FBF000D82A93 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInMenuTableViewCell.swift; sourceTree = "<group>"; };
 		22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInMenuTableViewCell.xib; sourceTree = "<group>"; };
+		22BB695126560D5200D82A93 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		8A44F5C7DB9BA327F00BB7A9 /* Pods_42Events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_42Events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F5528C219E1B594A226B67 /* Pods-42Events.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42Events.release.xcconfig"; path = "Target Support Files/Pods-42Events/Pods-42Events.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,8 +137,9 @@
 		2207470C26527C8D004C6B07 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				220746F826527BF2004C6B07 /* HomeViewController.swift */,
 				22BB693E2655FBF000D82A93 /* SideMenuViewController.swift */,
+				220746F826527BF2004C6B07 /* HomeViewController.swift */,
+				22BB695126560D5200D82A93 /* EventViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				229FF0182653B59D0089BACC /* SubItemCollectionViewCell.swift in Sources */,
 				22BB693F2655FBF000D82A93 /* SideMenuViewController.swift in Sources */,
 				22BB69432655FF5B00D82A93 /* ItemInMenuTableViewCell.swift in Sources */,
+				22BB695226560D5200D82A93 /* EventViewController.swift in Sources */,
 				229FEF80265367C80089BACC /* NetworkManager.swift in Sources */,
 				229FF0122653A77D0089BACC /* ItemCollectionViewCell.swift in Sources */,
 				229FEF86265368DE0089BACC /* DataManager.swift in Sources */,

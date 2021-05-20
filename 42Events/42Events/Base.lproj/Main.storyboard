@@ -126,6 +126,64 @@
             </objects>
             <point key="canvasLocation" x="-1481.1594202898552" y="1672.7678571428571"/>
         </scene>
+        <!--Event View Controller-->
+        <scene sceneID="lSm-dg-dct">
+            <objects>
+                <viewController storyboardIdentifier="EventViewController" id="Ye9-Ho-5AY" customClass="EventViewController" customModule="_2Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tAb-gX-IQu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 running events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX1-zc-fVP">
+                                <rect key="frame" x="20" y="108" width="127" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NSe-sJ-Zuv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nu6-7C-YHc">
+                                <rect key="frame" x="0.0" y="149" width="414" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eba-6X-FLk">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MOI-CX-0wI">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q9B-Ia-Xi9">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DgI-Ju-PTM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qX1-zc-fVP" firstAttribute="top" secondItem="DgI-Ju-PTM" secondAttribute="top" constant="20" id="3f6-m9-OiP"/>
+                            <constraint firstItem="Nu6-7C-YHc" firstAttribute="leading" secondItem="DgI-Ju-PTM" secondAttribute="leading" id="HHk-vq-BmB"/>
+                            <constraint firstItem="DgI-Ju-PTM" firstAttribute="trailing" secondItem="Nu6-7C-YHc" secondAttribute="trailing" id="fQZ-on-uda"/>
+                            <constraint firstAttribute="bottom" secondItem="Nu6-7C-YHc" secondAttribute="bottom" id="gm6-DD-YMO"/>
+                            <constraint firstItem="Nu6-7C-YHc" firstAttribute="top" secondItem="qX1-zc-fVP" secondAttribute="bottom" constant="20" id="o1m-zf-wLu"/>
+                            <constraint firstItem="qX1-zc-fVP" firstAttribute="leading" secondItem="DgI-Ju-PTM" secondAttribute="leading" constant="20" id="rwH-eI-m4p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oQ6-hy-JDY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Nu6-7C-YHc" id="W0P-pp-iZI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUM-6F-Woa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="2713"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -473,6 +531,7 @@
                         <outlet property="pastRacesCollectionView" destination="M3X-Xh-04g" id="Ssv-rp-bJt"/>
                         <outlet property="popularCollectionView" destination="ADs-g6-USk" id="I5J-Ff-tJC"/>
                         <outlet property="startingSoonCollectionView" destination="bGo-ZC-BTP" id="Jr7-UU-xN2"/>
+                        <segue destination="Ye9-Ho-5AY" kind="show" id="Fse-us-cWx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -498,6 +557,7 @@
             <point key="canvasLocation" x="13.043478260869566" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Arrow Down" width="13" height="8"/>
         <image name="icons8-hamburger" width="24" height="24"/>
