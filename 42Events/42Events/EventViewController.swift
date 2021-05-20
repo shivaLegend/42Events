@@ -8,7 +8,7 @@
 import UIKit
 
 class EventViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var totalEventsLbl: UILabel!
     private let heightOfCell: CGFloat = 300
@@ -38,14 +38,12 @@ class EventViewController: UIViewController {
     func callAPIRaceEvents() {
         var type = ""
         switch typeEvent {
-        case .Running:
-            type = "running"
         case .Cycling:
             type = "cycling"
         case .Walking:
             type = "walking"
         default:
-            break
+            type = "running"
         }
         Reachability.checkNetwork(vc: self)
         provider.request(.getDetailEvent(skipCount: "0", limit: "10", type: type)) { (result) in

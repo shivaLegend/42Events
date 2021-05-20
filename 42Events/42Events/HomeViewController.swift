@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
         initCollectionView()
         initPageControl()
         initSideMenu()
-       
+        
     }
     func initSideMenu() {
         SideMenuManager.default.addPanGestureToPresent(toView: navigationController!.navigationBar)
