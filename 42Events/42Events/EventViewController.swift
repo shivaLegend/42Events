@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import GradientLoadingBar
 class EventViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -46,12 +46,14 @@ class EventViewController: UIViewController {
             type = "running"
         }
         Reachability.checkNetwork(vc: self)
+        GradientLoadingBar.shared.fadeIn()
         provider.request(.getDetailEvent(skipCount: "0", limit: "10", type: type)) { (result) in
             if let json = DataManager.shared.isSuccessData(result: result, vc: self) {
                 self.data = DetailEvent(json: json)
                 self.totalEventsLbl.text = String(self.data?.total ?? 0) + " \(type) events"
                 self.collectionView.reloadData()
             }
+            GradientLoadingBar.shared.fadeOut()
         }
     }
 }

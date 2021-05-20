@@ -8,7 +8,7 @@
 import UIKit
 import FSPagerView
 import SideMenu
-
+import GradientLoadingBar
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var pagerView: FSPagerView!
@@ -107,6 +107,7 @@ class HomeViewController: UIViewController {
     //MARK: - API functions
     func callAPIRaceEvents() {
         Reachability.checkNetwork(vc: self)
+        GradientLoadingBar.shared.fadeIn()
         provider.request(.raceEvents) { (result) in
             if let json = DataManager.shared.isSuccessData(result: result, vc: self) {
                 self.data = DataItems(json: json)
@@ -115,8 +116,9 @@ class HomeViewController: UIViewController {
                 self.newReleaseCollectionView.reloadData()
                 self.freeCollectionView.reloadData()
                 self.pastRacesCollectionView.reloadData()
-               
+                
             }
+            GradientLoadingBar.shared.fadeOut()
         }
     }
 }
