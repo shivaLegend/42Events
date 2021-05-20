@@ -7,12 +7,19 @@
 
 import UIKit
 import GradientLoadingBar
+import DisplaySwitcher
 class EventViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var totalEventsLbl: UILabel!
+    
     private let heightOfCell: CGFloat = 270
+    private let gridLayoutStaticCellHeight: CGFloat = 100
     private var data: DetailEvent?
+    private lazy var listLayout = DisplaySwitchLayout(staticCellHeight: heightOfCell, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
+
+    private lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: heightOfCell, layoutState: .grid)
+    private var layoutState: LayoutState = .list
     var typeEvent: TypeEvent = .Cycling
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +37,24 @@ class EventViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
+        collectionView.collectionViewLayout = listLayout
+
         
     }
     //MARK: - Handler functions
+    @IBAction func swBtn(_ sender: UISwitch) {
+        let transitionManager: TransitionManager
+        if layoutState == .list {
+            layoutState = .grid
+            transitionManager = TransitionManager(duration: 0.3, collectionView: collectionView!, destinationLayout: gridLayout, layoutState: layoutState)
+        } else {
+            layoutState = .list
+            transitionManager = TransitionManager(duration: 0.3, collectionView: collectionView!, destinationLayout: listLayout, layoutState: layoutState)
+        }
+        transitionManager.startInteractiveTransition()
+        sender.isOn = layoutState == .list
+        
+    }
     
     //MARK: - API functions
     func callAPIRaceEvents() {
@@ -72,6 +94,10 @@ extension EventViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width - 20, height: heightOfCell)
+    }
+    func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
+        let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
+        return customTransitionLayout
     }
 }
 
