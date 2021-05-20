@@ -11,7 +11,7 @@ class EventViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var totalEventsLbl: UILabel!
-    private let heightOfCell: CGFloat = 300
+    private let heightOfCell: CGFloat = 310
     private var data: DetailEvent?
     var typeEvent: TypeEvent = .Cycling
     override func viewDidLoad() {
