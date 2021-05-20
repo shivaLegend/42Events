@@ -10,8 +10,9 @@ import UIKit
 class EventViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    private let heightOfCell: CGFloat = 310
-    
+    @IBOutlet weak var totalEventsLbl: UILabel!
+    private let heightOfCell: CGFloat = 300
+    private var data: DetailEvent?
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -37,7 +38,9 @@ class EventViewController: UIViewController {
         Reachability.checkNetwork(vc: self)
         provider.request(.getDetailEvent(skipCount: "0", limit: "10", type: "running")) { (result) in
             if let json = DataManager.shared.isSuccessData(result: result, vc: self) {
-               
+                self.data = DetailEvent(json: json)
+                self.totalEventsLbl.text = String(self.data?.total ?? 0) + " running events"
+                self.collectionView.reloadData()
             }
         }
     }
@@ -45,17 +48,18 @@ class EventViewController: UIViewController {
 //MARK: -UICollectionViewDataSource, UICollectionViewDelegate
 extension EventViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return data?.total ?? 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-//        cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
+        let temp = self.data?.events[indexPath.row]
+        cell.setData(image: temp?.urlImage ?? "", title: temp?.title ?? "", subTitle: temp?.subTitle ?? "")
         return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width - 10, height: heightOfCell)
+        return CGSize(width: collectionView.bounds.width - 20, height: heightOfCell)
     }
 }
 

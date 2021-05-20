@@ -36,7 +36,7 @@ class SideMenuViewController: UIViewController {
     func initDropDownView() {
         dropDown.backgroundColor = .white
         dropDown.anchorView = self.languageLbl
-        let source : [String] = ["English", "日本語","ภาษาไทย","Bahasa Indonesia", "Tiếng Việt"]
+        let source : [String] = ["English", "日本語","ภาษาไทย","Indonesia", "Tiếng Việt"]
         dropDown.dataSource = source
         dropDown.direction = .bottom
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)

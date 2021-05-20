@@ -33,6 +33,7 @@
 		22BB69432655FF5B00D82A93 /* ItemInMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */; };
 		22BB69442655FF5B00D82A93 /* ItemInMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */; };
 		22BB695226560D5200D82A93 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB695126560D5200D82A93 /* EventViewController.swift */; };
+		22BB69602656163E00D82A93 /* DetailEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB695F2656163E00D82A93 /* DetailEvent.swift */; };
 		FA668B736F2ECDC81172C69A /* Pods_42Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A44F5C7DB9BA327F00BB7A9 /* Pods_42Events.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInMenuTableViewCell.swift; sourceTree = "<group>"; };
 		22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInMenuTableViewCell.xib; sourceTree = "<group>"; };
 		22BB695126560D5200D82A93 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		22BB695F2656163E00D82A93 /* DetailEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEvent.swift; sourceTree = "<group>"; };
 		8A44F5C7DB9BA327F00BB7A9 /* Pods_42Events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_42Events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F5528C219E1B594A226B67 /* Pods-42Events.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42Events.release.xcconfig"; path = "Target Support Files/Pods-42Events/Pods-42Events.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				227F209D2654BE18005233DF /* Item.swift */,
+				22BB695F2656163E00D82A93 /* DetailEvent.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				229FEF8A265369360089BACC /* AlertBuilder.swift in Sources */,
+				22BB69602656163E00D82A93 /* DetailEvent.swift in Sources */,
 				229FEF92265379DB0089BACC /* EventCollectionViewCell.swift in Sources */,
 				229FF0182653B59D0089BACC /* SubItemCollectionViewCell.swift in Sources */,
 				22BB693F2655FBF000D82A93 /* SideMenuViewController.swift in Sources */,
