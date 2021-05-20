@@ -7,6 +7,11 @@
 
 import UIKit
 import SwiftyJSON
+enum TypeEvent {
+    case Running
+    case Cycling
+    case Walking
+}
 struct DetailEvent {
     let total: Int
     let events: [Item]

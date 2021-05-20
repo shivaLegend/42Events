@@ -13,6 +13,7 @@ class EventViewController: UIViewController {
     @IBOutlet weak var totalEventsLbl: UILabel!
     private let heightOfCell: CGFloat = 300
     private var data: DetailEvent?
+    var typeEvent: TypeEvent = .Cycling
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -35,11 +36,22 @@ class EventViewController: UIViewController {
     
     //MARK: - API functions
     func callAPIRaceEvents() {
+        var type = ""
+        switch typeEvent {
+        case .Running:
+            type = "running"
+        case .Cycling:
+            type = "cycling"
+        case .Walking:
+            type = "walking"
+        default:
+            break
+        }
         Reachability.checkNetwork(vc: self)
-        provider.request(.getDetailEvent(skipCount: "0", limit: "10", type: "running")) { (result) in
+        provider.request(.getDetailEvent(skipCount: "0", limit: "10", type: type)) { (result) in
             if let json = DataManager.shared.isSuccessData(result: result, vc: self) {
                 self.data = DetailEvent(json: json)
-                self.totalEventsLbl.text = String(self.data?.total ?? 0) + " running events"
+                self.totalEventsLbl.text = String(self.data?.total ?? 0) + " \(type) events"
                 self.collectionView.reloadData()
             }
         }

@@ -194,6 +194,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case eventsCollectionView:
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EventViewController") as! EventViewController
             vc.title = listEvent[indexPath.row]
+            switch indexPath.row {
+            case 0:
+                vc.typeEvent = .Running
+            case 1:
+                vc.typeEvent = .Cycling
+            case 2:
+                vc.typeEvent = .Walking
+            default:
+                break
+            }
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
