@@ -35,7 +35,10 @@ class HomeViewController: UIViewController {
         initUI()
         callAPIRaceEvents()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let sideMenuNavigationController = segue.destination as? SideMenuNavigationController else { return }
+        sideMenuNavigationController.menuWidth = UIScreen.main.bounds.width*3/4
+    }
     
     //MARK: - UI functions
     func initUI() {
@@ -48,6 +51,7 @@ class HomeViewController: UIViewController {
     func initSideMenu() {
         SideMenuManager.default.addPanGestureToPresent(toView: navigationController!.navigationBar)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
+        
     }
     func initPagerView() {
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")

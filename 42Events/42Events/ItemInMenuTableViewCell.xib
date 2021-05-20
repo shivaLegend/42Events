@@ -24,8 +24,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2O-An-JQn">
-                        <rect key="frame" x="54" y="22.5" width="41.5" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <rect key="frame" x="54" y="22.5" width="40.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
