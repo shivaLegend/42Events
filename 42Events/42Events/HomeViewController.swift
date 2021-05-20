@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var freeCollectionView: UICollectionView!
     @IBOutlet weak var pastRacesCollectionView: UICollectionView!
     
-    private let listImage = [UIImage(named: "img1.jpeg"),
+    private var listImagePagerView = [UIImage(named: "img1.jpeg"),
                              UIImage(named: "img2.jpeg"),
                              UIImage(named: "img3.jpeg"),
                              UIImage(named: "img4.jpeg")]
@@ -65,7 +65,7 @@ class HomeViewController: UIViewController {
         pagerView.automaticSlidingInterval = 2
     }
     func initPageControl() {
-        pageControlView.numberOfPages = listImage.count
+        pageControlView.numberOfPages = listImagePagerView.count
         pageControlView.contentHorizontalAlignment = .center
         pageControlView.backgroundColor = .clear
         pageControlView.setFillColor(.red, for: .selected)
@@ -115,6 +115,7 @@ class HomeViewController: UIViewController {
                 self.newReleaseCollectionView.reloadData()
                 self.freeCollectionView.reloadData()
                 self.pastRacesCollectionView.reloadData()
+               
             }
         }
     }
@@ -214,12 +215,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 //MARK: - FSPagerViewDelegate, FSPagerViewDataSource
 extension HomeViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     public func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return listImage.count
+        return listImagePagerView.count
     }
     
     public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.image = listImage[index]
+        cell.imageView?.image = listImagePagerView[index]
         return cell
     }
     

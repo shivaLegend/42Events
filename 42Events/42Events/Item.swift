@@ -58,6 +58,7 @@ struct Item {
     let racePrice: String
     let eventType: String
     let tags: [String]
+    let isFreeEngraving: Bool
     init(json: JSON) {
         urlImage = json["banner_card"].stringValue
         title = json["race_name"].stringValue
@@ -74,6 +75,7 @@ struct Item {
         tempTags.append(eventType)
 
         tags = tempTags
+        isFreeEngraving = json["isFreeEngraving"].boolValue
     }
 }
 

@@ -14,6 +14,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var subTitleLbl: UILabel!
+    @IBOutlet weak var freeEngravingLbl: UILabel! {
+        didSet {
+            freeEngravingLbl.roundCornersWith(radius: 15)
+        }
+    }
     
     private var listSubItem: [String] = []
     override func awakeFromNib() {
@@ -43,6 +48,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
                 listSubItem.append(i)
             }
         }
+        freeEngravingLbl.isHidden = !data.isFreeEngraving
         collectionView.reloadData()
     }
 }
