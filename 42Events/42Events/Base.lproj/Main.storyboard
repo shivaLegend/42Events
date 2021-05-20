@@ -212,7 +212,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="2262"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0L-Yu-0sw" userLabel="Container">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2111"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2061"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-Bg-4AJ" customClass="FSPagerView" customModule="FSPagerView">
                                                 <rect key="frame" x="0.0" y="10" width="414" height="170"/>
@@ -278,10 +278,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bGo-ZC-BTP">
-                                                <rect key="frame" x="10" y="393" width="404" height="280"/>
+                                                <rect key="frame" x="10" y="393" width="404" height="270"/>
                                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="280" id="Rky-S7-zTt"/>
+                                                    <constraint firstAttribute="height" constant="270" id="Rky-S7-zTt"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6fy-1M-U3v">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -301,14 +301,14 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBm-E8-H6c" userLabel="View Line">
-                                                <rect key="frame" x="10" y="693" width="394" height="1"/>
+                                                <rect key="frame" x="10" y="683" width="394" height="1"/>
                                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="6Ug-IA-KKv"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porpular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMS-ce-Gbk">
-                                                <rect key="frame" x="10" y="714" width="384" height="21"/>
+                                                <rect key="frame" x="10" y="704" width="384" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="p4l-1h-Zfr"/>
                                                 </constraints>
@@ -317,7 +317,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ADs-g6-USk">
-                                                <rect key="frame" x="10" y="745" width="404" height="280"/>
+                                                <rect key="frame" x="10" y="735" width="404" height="270"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FPQ-5I-6mv">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -337,14 +337,14 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHN-0o-oK4" userLabel="View Line">
-                                                <rect key="frame" x="10" y="1045" width="394" height="1"/>
+                                                <rect key="frame" x="10" y="1025" width="394" height="1"/>
                                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="DQM-by-cBV"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New releases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-Aq-IGQ">
-                                                <rect key="frame" x="10" y="1066" width="384" height="21"/>
+                                                <rect key="frame" x="10" y="1046" width="384" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="YGC-vy-9N0"/>
                                                 </constraints>
@@ -353,7 +353,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-rb-tMG">
-                                                <rect key="frame" x="10" y="1097" width="404" height="280"/>
+                                                <rect key="frame" x="10" y="1077" width="404" height="270"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U6d-fR-zOM">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -373,14 +373,14 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRP-1o-8zG" userLabel="View Line">
-                                                <rect key="frame" x="10" y="1397" width="394" height="1"/>
+                                                <rect key="frame" x="10" y="1367" width="394" height="1"/>
                                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="rzm-Oy-sIN"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91D-H4-qGS">
-                                                <rect key="frame" x="10" y="1418" width="384" height="21"/>
+                                                <rect key="frame" x="10" y="1388" width="384" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="p0v-4z-kgp"/>
                                                 </constraints>
@@ -389,7 +389,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I6c-Zg-JX4">
-                                                <rect key="frame" x="10" y="1449" width="404" height="280"/>
+                                                <rect key="frame" x="10" y="1419" width="404" height="270"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lo9-xR-2Jq">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -409,14 +409,14 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7A-6E-FUr" userLabel="View Line">
-                                                <rect key="frame" x="10" y="1749" width="394" height="1"/>
+                                                <rect key="frame" x="10" y="1709" width="394" height="1"/>
                                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="voV-Yi-rqG"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Races" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyJ-5i-sTD">
-                                                <rect key="frame" x="10" y="1770" width="384" height="21"/>
+                                                <rect key="frame" x="10" y="1730" width="384" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="J9g-On-TLl"/>
                                                 </constraints>
@@ -425,7 +425,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M3X-Xh-04g">
-                                                <rect key="frame" x="10" y="1801" width="404" height="280"/>
+                                                <rect key="frame" x="10" y="1761" width="404" height="270"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i9O-SN-beQ">
                                                     <size key="itemSize" width="128" height="128"/>
