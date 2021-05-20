@@ -7,6 +7,7 @@
 
 import UIKit
 import FSPagerView
+import SideMenu
 
 class HomeViewController: UIViewController {
     
@@ -42,6 +43,11 @@ class HomeViewController: UIViewController {
         initPagerView()
         initCollectionView()
         initPageControl()
+        initSideMenu()
+    }
+    func initSideMenu() {
+        SideMenuManager.default.addPanGestureToPresent(toView: navigationController!.navigationBar)
+        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
     }
     func initPagerView() {
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")

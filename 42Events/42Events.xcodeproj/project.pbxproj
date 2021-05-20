@@ -29,6 +29,9 @@
 		229FF0132653A77D0089BACC /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229FF0112653A77D0089BACC /* ItemCollectionViewCell.xib */; };
 		229FF0182653B59D0089BACC /* SubItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FF0162653B59D0089BACC /* SubItemCollectionViewCell.swift */; };
 		229FF0192653B59D0089BACC /* SubItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229FF0172653B59D0089BACC /* SubItemCollectionViewCell.xib */; };
+		22BB693F2655FBF000D82A93 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB693E2655FBF000D82A93 /* SideMenuViewController.swift */; };
+		22BB69432655FF5B00D82A93 /* ItemInMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */; };
+		22BB69442655FF5B00D82A93 /* ItemInMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */; };
 		FA668B736F2ECDC81172C69A /* Pods_42Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A44F5C7DB9BA327F00BB7A9 /* Pods_42Events.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		229FF0112653A77D0089BACC /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		229FF0162653B59D0089BACC /* SubItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		229FF0172653B59D0089BACC /* SubItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		22BB693E2655FBF000D82A93 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInMenuTableViewCell.swift; sourceTree = "<group>"; };
+		22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInMenuTableViewCell.xib; sourceTree = "<group>"; };
 		8A44F5C7DB9BA327F00BB7A9 /* Pods_42Events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_42Events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F5528C219E1B594A226B67 /* Pods-42Events.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42Events.release.xcconfig"; path = "Target Support Files/Pods-42Events/Pods-42Events.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				229FEF8F265379C30089BACC /* CollectionViewCell */,
+				22BB69462655FF6900D82A93 /* TableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				220746F826527BF2004C6B07 /* HomeViewController.swift */,
+				22BB693E2655FBF000D82A93 /* SideMenuViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +192,15 @@
 				229FF0172653B59D0089BACC /* SubItemCollectionViewCell.xib */,
 			);
 			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		22BB69462655FF6900D82A93 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */,
+				22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 		BF2EB1F2C14C0AB0A7F55928 /* Pods */ = {
@@ -269,6 +286,7 @@
 				229FEF93265379DB0089BACC /* EventCollectionViewCell.xib in Resources */,
 				229FF00726539E420089BACC /* img1.jpeg in Resources */,
 				229FF0132653A77D0089BACC /* ItemCollectionViewCell.xib in Resources */,
+				22BB69442655FF5B00D82A93 /* ItemInMenuTableViewCell.xib in Resources */,
 				229FF00626539E420089BACC /* img3.jpeg in Resources */,
 				229FF0192653B59D0089BACC /* SubItemCollectionViewCell.xib in Resources */,
 				229FF00926539E420089BACC /* img4.jpeg in Resources */,
@@ -327,6 +345,8 @@
 				229FEF8A265369360089BACC /* AlertBuilder.swift in Sources */,
 				229FEF92265379DB0089BACC /* EventCollectionViewCell.swift in Sources */,
 				229FF0182653B59D0089BACC /* SubItemCollectionViewCell.swift in Sources */,
+				22BB693F2655FBF000D82A93 /* SideMenuViewController.swift in Sources */,
+				22BB69432655FF5B00D82A93 /* ItemInMenuTableViewCell.swift in Sources */,
 				229FEF80265367C80089BACC /* NetworkManager.swift in Sources */,
 				229FF0122653A77D0089BACC /* ItemCollectionViewCell.swift in Sources */,
 				229FEF86265368DE0089BACC /* DataManager.swift in Sources */,
