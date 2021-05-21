@@ -144,6 +144,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r6j-jF-INt">
+                                <rect key="frame" x="0.0" y="149" width="414" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nu6-7C-YHc">
                                 <rect key="frame" x="0.0" y="149" width="414" height="747"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -183,19 +187,24 @@
                         <constraints>
                             <constraint firstItem="qX1-zc-fVP" firstAttribute="top" secondItem="DgI-Ju-PTM" secondAttribute="top" constant="20" id="3f6-m9-OiP"/>
                             <constraint firstItem="BBe-Wy-BLO" firstAttribute="centerY" secondItem="qX1-zc-fVP" secondAttribute="centerY" id="4Jf-gV-Did"/>
+                            <constraint firstItem="r6j-jF-INt" firstAttribute="height" secondItem="Nu6-7C-YHc" secondAttribute="height" id="9uK-Ua-0lx"/>
                             <constraint firstItem="Nu6-7C-YHc" firstAttribute="leading" secondItem="DgI-Ju-PTM" secondAttribute="leading" id="HHk-vq-BmB"/>
+                            <constraint firstItem="r6j-jF-INt" firstAttribute="width" secondItem="Nu6-7C-YHc" secondAttribute="width" id="OPD-Nh-0wG"/>
                             <constraint firstItem="DgI-Ju-PTM" firstAttribute="trailing" secondItem="BBe-Wy-BLO" secondAttribute="trailing" constant="20" id="TCd-if-GPs"/>
                             <constraint firstItem="4em-sZ-VPr" firstAttribute="centerY" secondItem="BBe-Wy-BLO" secondAttribute="centerY" id="US4-Yc-kRc"/>
+                            <constraint firstItem="r6j-jF-INt" firstAttribute="centerY" secondItem="Nu6-7C-YHc" secondAttribute="centerY" id="Zd7-ck-UiN"/>
                             <constraint firstItem="BBe-Wy-BLO" firstAttribute="leading" secondItem="4em-sZ-VPr" secondAttribute="trailing" constant="10" id="eaZ-gp-C6d"/>
                             <constraint firstItem="DgI-Ju-PTM" firstAttribute="trailing" secondItem="Nu6-7C-YHc" secondAttribute="trailing" id="fQZ-on-uda"/>
                             <constraint firstAttribute="bottom" secondItem="Nu6-7C-YHc" secondAttribute="bottom" id="gm6-DD-YMO"/>
                             <constraint firstItem="Nu6-7C-YHc" firstAttribute="top" secondItem="qX1-zc-fVP" secondAttribute="bottom" constant="20" id="o1m-zf-wLu"/>
+                            <constraint firstItem="r6j-jF-INt" firstAttribute="centerX" secondItem="Nu6-7C-YHc" secondAttribute="centerX" id="qZX-iW-E1O"/>
                             <constraint firstItem="qX1-zc-fVP" firstAttribute="leading" secondItem="DgI-Ju-PTM" secondAttribute="leading" constant="20" id="rwH-eI-m4p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oQ6-hy-JDY"/>
                     <connections>
                         <outlet property="collectionView" destination="Nu6-7C-YHc" id="W0P-pp-iZI"/>
+                        <outlet property="tableView" destination="r6j-jF-INt" id="R76-FI-V0H"/>
                         <outlet property="totalEventsLbl" destination="qX1-zc-fVP" id="Nww-U2-Hz5"/>
                     </connections>
                 </viewController>

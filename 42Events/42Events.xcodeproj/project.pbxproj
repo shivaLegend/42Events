@@ -12,6 +12,8 @@
 		220746FC26527BF2004C6B07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220746FA26527BF2004C6B07 /* Main.storyboard */; };
 		220746FE26527BF4004C6B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220746FD26527BF4004C6B07 /* Assets.xcassets */; };
 		2207470126527BF4004C6B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220746FF26527BF4004C6B07 /* LaunchScreen.storyboard */; };
+		2214B83226574975008651DC /* MedalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214B83026574975008651DC /* MedalTableViewCell.swift */; };
+		2214B83326574975008651DC /* MedalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2214B83126574975008651DC /* MedalTableViewCell.xib */; };
 		227F209E2654BE18005233DF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F209D2654BE18005233DF /* Item.swift */; };
 		227F20A92654CB95005233DF /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F20A82654CB95005233DF /* CollectionViewFlowLayout.swift */; };
 		229FEF80265367C80089BACC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FEF7F265367C80089BACC /* NetworkManager.swift */; };
@@ -45,6 +47,8 @@
 		220746FD26527BF4004C6B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2207470026527BF4004C6B07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2207470226527BF4004C6B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2214B83026574975008651DC /* MedalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalTableViewCell.swift; sourceTree = "<group>"; };
+		2214B83126574975008651DC /* MedalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedalTableViewCell.xib; sourceTree = "<group>"; };
 		225631AB7EF3AFA1A0E22110 /* Pods-42Events.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42Events.debug.xcconfig"; path = "Target Support Files/Pods-42Events/Pods-42Events.debug.xcconfig"; sourceTree = "<group>"; };
 		227F209D2654BE18005233DF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		227F20A82654CB95005233DF /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			children = (
 				22BB69412655FF5B00D82A93 /* ItemInMenuTableViewCell.swift */,
 				22BB69422655FF5B00D82A93 /* ItemInMenuTableViewCell.xib */,
+				2214B83026574975008651DC /* MedalTableViewCell.swift */,
+				2214B83126574975008651DC /* MedalTableViewCell.xib */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				220746FC26527BF2004C6B07 /* Main.storyboard in Resources */,
 				229FF00826539E420089BACC /* img2.jpeg in Resources */,
 				229FEF93265379DB0089BACC /* EventCollectionViewCell.xib in Resources */,
+				2214B83326574975008651DC /* MedalTableViewCell.xib in Resources */,
 				229FF00726539E420089BACC /* img1.jpeg in Resources */,
 				229FF0132653A77D0089BACC /* ItemCollectionViewCell.xib in Resources */,
 				22BB69442655FF5B00D82A93 /* ItemInMenuTableViewCell.xib in Resources */,
@@ -360,6 +367,7 @@
 				229FEF86265368DE0089BACC /* DataManager.swift in Sources */,
 				227F20A92654CB95005233DF /* CollectionViewFlowLayout.swift in Sources */,
 				227F209E2654BE18005233DF /* Item.swift in Sources */,
+				2214B83226574975008651DC /* MedalTableViewCell.swift in Sources */,
 				220746F926527BF2004C6B07 /* HomeViewController.swift in Sources */,
 				229FEF83265368C10089BACC /* Reachability.swift in Sources */,
 				220746F526527BF2004C6B07 /* AppDelegate.swift in Sources */,

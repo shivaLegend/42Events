@@ -7,19 +7,16 @@
 
 import UIKit
 import GradientLoadingBar
-import DisplaySwitcher
+
 class EventViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var totalEventsLbl: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     private let heightOfCell: CGFloat = 270
-    private let gridLayoutStaticCellHeight: CGFloat = 100
     private var data: DetailEvent?
-    private lazy var listLayout = DisplaySwitchLayout(staticCellHeight: heightOfCell, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
-
-    private lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: heightOfCell, layoutState: .grid)
-    private var layoutState: LayoutState = .list
+    
     var typeEvent: TypeEvent = .Cycling
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,29 +28,24 @@ class EventViewController: UIViewController {
     //MARK: - UI functions
     func initUI() {
         initCollectionView()
+        initTableView()
     }
     func initCollectionView() {
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
-        collectionView.collectionViewLayout = listLayout
+    }
+    func initTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "MedalTableViewCell", bundle: nil), forCellReuseIdentifier: "MedalTableViewCell")
 
-        
     }
     //MARK: - Handler functions
     @IBAction func swBtn(_ sender: UISwitch) {
-        let transitionManager: TransitionManager
-        if layoutState == .list {
-            layoutState = .grid
-            transitionManager = TransitionManager(duration: 0.3, collectionView: collectionView!, destinationLayout: gridLayout, layoutState: layoutState)
-        } else {
-            layoutState = .list
-            transitionManager = TransitionManager(duration: 0.3, collectionView: collectionView!, destinationLayout: listLayout, layoutState: layoutState)
-        }
-        transitionManager.startInteractiveTransition()
-        sender.isOn = layoutState == .list
-        
+        collectionView.isHidden = sender.isOn
+        tableView.isHidden = !sender.isOn
     }
     
     //MARK: - API functions
@@ -74,6 +66,7 @@ class EventViewController: UIViewController {
                 self.data = DetailEvent(json: json)
                 self.totalEventsLbl.text = String(self.data?.total ?? 0) + " \(type) events"
                 self.collectionView.reloadData()
+                self.tableView.reloadData()
             }
             GradientLoadingBar.shared.fadeOut()
         }
@@ -95,9 +88,22 @@ extension EventViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width - 20, height: heightOfCell)
     }
-    func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
-        let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
-        return customTransitionLayout
-    }
 }
-
+//MARK: -UITableViewDelegate, UITableViewDataSource
+extension EventViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let temp = data {
+            return temp.events.count
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MedalTableViewCell") as! MedalTableViewCell
+        guard let temp = data?.events[indexPath.row] else {return cell}
+        cell.setData(data: temp)
+        return cell
+    }
+    
+    
+}
