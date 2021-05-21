@@ -11,10 +11,4 @@ We have 7 folder:
 7. Resource: Stored some image, ...
 
 Here is some library that i use:
-pod 'FSPagerView'
-pod 'Moya', '~> 14.0'
-pod 'SwiftyJSON', '~> 4.0'
-pod 'SDWebImage', '~> 5.0'
-pod 'SideMenu'
-pod 'DropDown'
-pod 'GradientLoadingBar', '~> 2.0'
+'FSPagerView', Moya', 'SwiftyJSON', 'SDWebImage', 'SideMenu', 'DropDown', 'GradientLoadingBar'
