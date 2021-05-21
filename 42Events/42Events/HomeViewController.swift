@@ -21,9 +21,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var pastRacesCollectionView: UICollectionView!
     
     private var listImagePagerView = [UIImage(named: "img1.jpeg"),
-                             UIImage(named: "img2.jpeg"),
-                             UIImage(named: "img3.jpeg"),
-                             UIImage(named: "img4.jpeg")]
+                                      UIImage(named: "img2.jpeg"),
+                                      UIImage(named: "img3.jpeg"),
+                                      UIImage(named: "img4.jpeg")]
     private let listEvent = ["Running", "Cycling", "Walking"]
     private let listEventColor = [UIColor(red: 0/255, green: 192/255, blue: 174/255, alpha: 1.0),
                                   UIColor(red: 20/255, green: 188/255, blue: 239/255, alpha: 1.0),
