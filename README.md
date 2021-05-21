@@ -12,3 +12,5 @@ We have 7 folder:
 
 Here is some library that i use:
 'FSPagerView', Moya', 'SwiftyJSON', 'SDWebImage', 'SideMenu', 'DropDown', 'GradientLoadingBar'
+Just download project and run in xCode !
+ 
