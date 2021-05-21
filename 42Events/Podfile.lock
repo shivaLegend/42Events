@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (5.4.1)
-  - DisplaySwitcher (2.0)
   - DropDown (2.3.13)
   - FSPagerView (0.8.3)
   - GradientLoadingBar (2.1.1):
@@ -17,7 +16,6 @@ PODS:
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
-  - DisplaySwitcher (~> 2.0)
   - DropDown
   - FSPagerView
   - GradientLoadingBar (~> 2.0)
@@ -29,7 +27,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - DisplaySwitcher
     - DropDown
     - FSPagerView
     - GradientLoadingBar
@@ -41,7 +38,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  DisplaySwitcher: 1db23ee6a45fbebac733917cc002204adad37d28
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   GradientLoadingBar: d7ad91e4f15be604faca463efd63e541b5118dee
@@ -51,6 +47,6 @@ SPEC CHECKSUMS:
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 2d2cd751c3f08bd3e424dc7251647853d3b899b7
+PODFILE CHECKSUM: a15c328a30451030f8c4e064c62100b8916a23d8
 
 COCOAPODS: 1.10.1
